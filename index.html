@@ -1,0 +1,30 @@
+---
+title: "The digitised past"
+layout: full
+permalink: /
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /assets/images/IMG_6660.jpg
+excerpt: "IIIF and related digital image posts."
+intro: 
+  - excerpt: 'This is a blog but not officially related to IIIF'
+---
+
+<!--{% include page__hero.html %}-->
+<!-- linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) -->
+<div class="wrapper">
+        <h1 class="page__title" itemprop="headline">
+            {{ site.title }}
+        </h1>
+        <p class="page__lead" style="width:100%;max-width:unset">{{site.description}}</p>
+    </div>
+
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+
+{% for post in paginator.posts %}
+  {% include archive-single.html %}
+{% endfor %}
+
+{% include paginator.html %}
+</div>

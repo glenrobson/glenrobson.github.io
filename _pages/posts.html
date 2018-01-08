@@ -1,0 +1,16 @@
+---
+title: "The digitised past"
+layout: single
+permalink: /posts/
+---
+
+<div class="wrapper">
+        <p class="page__lead" style="width:100%;max-width:unset">{{site.description}}</p>
+    </div>
+
+{% for post in site.posts %}
+  {% include archive-single.html %}
+{% endfor %}
+
+{% include paginator.html %}
+</div>
