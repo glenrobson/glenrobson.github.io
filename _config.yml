@@ -17,8 +17,10 @@ title: The digitised past
 email: your-email@example.com
 cover: /assets/images/main.jpg
 description: >- # this means to ignore newlines until "baseurl:"
-    This is a blog investigating different usecases around IIIF and other web technologies to help
+    This is a blog investigating different use cases around IIIF and other web technologies to help
     explore the past through historical documents and objects.
+disclaimer: "All views expressed on this site are my own and should not be taken to represent
+the views of the IIIF Consortium or IIIF Community."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: glenrobson
@@ -34,10 +36,10 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
 
-teaser: /assets/images/main.jpg
+#teaser: /assets/images/main.jpg
 breadcrumbs: false
 
-include: ["_pages"] 
+include: ["_pages"]
 
 author:
   name: "Glen Robson"
@@ -60,7 +62,7 @@ author:
 #   - vendor/gems/
 #   - vendor/ruby/
 defaults:
- - 
+ -
    scope:
      path: ""
      type: posts
@@ -71,4 +73,3 @@ defaults:
      comments: true
      share: true
      related: true
-
