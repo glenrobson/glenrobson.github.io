@@ -4,6 +4,9 @@ title:  "MarineLives New Year Wishes"
 date:   2018-01-04 12:27:22 +0000
 categories: iiif wish-list
 teaser: http://www.marinelives.org/resources/assets/marinelives-small.jpg
+toc: true
+toc_label: "Wish List"
+toc_icon: "align-left"
 ---
 
 This post began as a discussion on [twitter][ml-tw-discussion] on how IIIF could help the MarineLives project achieve their goals on collecting and transcribing historical content related to the manuscripts of the High Court of Admiralty 1627-1677. You can read more about their mission on the MarineLives [wiki][about-MarineLives]. MarineLives is run by volunteers and works with data in digital form from various institutions.
@@ -18,13 +21,17 @@ The MarineLives 2018 New Years Wish list is as follows:
 
  4. A digital camera which saves each new image of a manuscript page with its archival reference number, not a number file name [e.g. TNA HCA 13/53 f.12r] - We could upload 1000 images a day to our laptops * search for them by archival reference & find instantly.
 
-Some of these wishes fall squarely into what IIIF offers and the others may be assisted by some related technologies.
+Some of these wishes fall squarely into what IIIF offers and the others may be assisted by some related technologies. Ill split the first wish into its parts:
+
+## 1-A: A world in which we could download a single manuscript image from an archival, library or museum website.
 
 Starting with the first one IIIF supports the transcription of images without requiring the images to be downloaded. This can make it easier for institutions including Archives, Libraries and Museums to make their images available but will also help in linking transcriptions back to a source image. IIIF provides support for transcriptions by using the [Web Annotations][web-annotations] W3C specification. Web annotations allow annotation on many different types of resources including images, web pages and videos. It is an open format which allows the interoperability of annotations created by different systems.
 
 Below is a video from Stanford demonstrating how to take a reference to two IIIF objects (one from Stanford and one from the Bodleian Library in Oxford) and drag them into a third viewer Mirador.
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/uih5JuQnYuo" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+## 1-B: Transcribing images
 
 The [Mirador][Mirador] viewer allows the comparison of images from different locations and also supports transcription of these images through its annotation interface and this is demonstrated in the following video:
 
@@ -34,7 +41,11 @@ Mirador supports both transcription and tagging type annotations. Transcribing t
 
 There are also other options for creating annotations including various Crowdsourcing systems mentioned in the [Awesome List issue][iiif-crowdsourcing]. All of these should allow the import of IIIF image and presentation endpoints and allow their transcription. While working at the National Library of Wales (NLW) I was involved in the development of a Crowdsourcing system with [Digirati][Digirati]. I gave a presentation in the Rome IIIF conference demonstrating the crowdsourcing of Photographs from [North Carolina State University][NCSU] using the NLW crowdsourcing system. A video showing the setup is available on [youtube][ncsu-crowdsourcing]. This video hopefully demonstrates the idea of taking content from a third party and transcribing using IIIF tools.
 
+## 1-C: then lob [annotations] into the Commons. All data recorded with the image.
+
 Annotations created through Mirador or the other crowdsourcing systems will likely be in either the Web Annotations format or the precursor Open Annotations. There isn't as far as I know a way to convert these annotations to something that could go on Wiki Commons but as the annotations are stored as JSON-LD it should be possible to convert them to other formats. An alternative to submitting the annotations to Commons is to submit the annotations back to the institution that is publishing the IIIF resource. Specifying this protocol is part of the work of the [IIIF Discovery group][iiif-discovery] but there is already an early proof of concept created between Jeff Witt (Loyola University Maryland) and e-Codices detailed in [Jeff's blog][webmentions]. This and Jeff's further work on Linked data Notifications offer an exciting option for the future where institutions can take back the work of volunteers and integrate the valuable data generated into their existing systems.
+
+## 1-D: And a Universal Search Tool would search all the content.
 
 There are many institutions which implement IIIF and some of these can be found on the [IIIF website][impl-list] but if you are working with content that isn't IIIF accessible then there are some alternatives detailed in the next section. The [IIIF Discovery][iiif-discovery] group are looking at ways to make it easier to find IIIF institutions and their images but the 'Universal Search Tool' mentioned is likely out of scope. The group does aim to put the protocols in place to allow someone to create this type of discovery tool particularly for annotations.
 

@@ -4,7 +4,11 @@
 
 @charset "utf-8";
 
-
+$small : 768px;
+$medium : 900px;
+$medium-wide : 1024px;
+$large : 1280px;
+$x-large : 1900px;
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
