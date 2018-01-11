@@ -48,6 +48,11 @@ author:
   twitter: "glenrobson"
   github: "glenrobson"
   linkedin: "glenrobson"
+# Analytics
+analytics:
+  provider               : "google" # false (default), "google", "google-universal", "custom"
+  google:
+    tracking_id          : "UA-112307291-1"
 
 
 # Exclude from processing.
