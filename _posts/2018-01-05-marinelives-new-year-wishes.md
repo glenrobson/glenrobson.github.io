@@ -9,7 +9,13 @@ toc_label: "Wish List"
 toc_icon: "align-left"
 ---
 
-This post began as a discussion on [twitter][ml-tw-discussion] on how IIIF could help the MarineLives project achieve their goals on collecting and transcribing historical content related to the manuscripts of the High Court of Admiralty 1627-1677. You can read more about their mission on the MarineLives [wiki][about-MarineLives]. MarineLives is run by volunteers and works with data in digital form from various institutions.
+This post began as a discussion on [twitter][ml-tw-discussion] on how IIIF could help the MarineLives project achieve their goals on collecting and transcribing historical content related to the manuscripts of the High Court of Admiralty 1627-1677. You can read more about their mission on the MarineLives [wiki][about-MarineLives] and in the following:
+
+<figure>
+	<a href="http://www.MarineLives.org/wiki/MarineLives#About_MarineLives"><img src="http://www.marinelives.org/thumb.php?f=New_ML_Vision_Rev_21102017.JPG&width=1400"></a>
+	<figcaption><a href="http://www.MarineLives.org/wiki/MarineLives#About_MarineLives" title="About the MarineLives project">About the MarineLives project</a>.</figcaption>
+</figure>
+
 
 The MarineLives 2018 New Years Wish list is as follows:
 
@@ -21,7 +27,7 @@ The MarineLives 2018 New Years Wish list is as follows:
 
  4. A digital camera which saves each new image of a manuscript page with its archival reference number, not a number file name [e.g. TNA HCA 13/53 f.12r] - We could upload 1000 images a day to our laptops * search for them by archival reference & find instantly.
 
-Some of these wishes fall squarely into what IIIF offers and the others may be assisted by some related technologies. Ill split the first wish into its parts:
+Some of these wishes fall squarely into what IIIF offers and the others may be assisted by some related technologies. I will split the first wish into its parts:
 
 ## 1-A: A world in which we could download a single manuscript image from an archival, library or museum website.
 
