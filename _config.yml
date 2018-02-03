@@ -26,6 +26,8 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: glenrobson
 github_username:  glenrobson
 
+head_scripts:
+  - /assets/js/openseadragon.min.js
 # Build settings
 markdown: kramdown
 #theme: minima
