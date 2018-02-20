@@ -1,0 +1,15 @@
+<div id="openseadragon1" style="width: 100%; height: 500px;"></div>
+<script>
+    //<![CDATA[
+    function initOpenSeadragon() {
+        OpenSeadragon({
+        id: "openseadragon1",
+        minZoomImageRatio: 1,
+        prefixUrl: "/assets/images/openseadragon/", // OSD needs trailing slash
+        tileSources: "{{ include.image }}/info.json",
+        crossOriginPolicy: false});
+    }
+    window.onload = initOpenSeadragon;
+    document.addEventListener("page:load", initOpenSeadragon); // Initialize when using turbolinks
+    //]]>
+</script>
