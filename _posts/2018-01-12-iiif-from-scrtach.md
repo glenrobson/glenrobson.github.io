@@ -5,7 +5,7 @@ date:   2018-01-12 12:27:22 +0000
 categories: iiif
 ---
 
-I've been trying to learn Welsh for a number of years but unfortunately I'm not a natural linguist. So when one of our neighbours gave our Children an old Welsh book to read I set about translating it. Being prone to technical procrastination rather than getting on with the translation I've had a look at how I can turn this book into a IIIF resource. I hope this will be useful for people looking to make their images available as IIIF but don't have the time or resources to invest in a comprehensive IIIF stack.
+I've been trying to learn Welsh for a number of years but unfortunately I'm not a natural linguist. So when one of our neighbours gave our Children an old Welsh book to read I set about using it as a challenge and translating it. Being prone to technical procrastination rather than getting on with the translation I've had a look at how I can turn this book into a IIIF resource. I hope this will be useful for people looking to make their images available as IIIF but don't have the time or resources to invest in a comprehensive IIIF stack.
 
 ## Stage 1 - Digitisation
 
@@ -136,10 +136,11 @@ To process all of the images I can run the following:
 
 and this generates 14 directories in `/tmp/welsh_book`. I've then copied the 14 directories into [this github project][iiif-welshbook] which is the code behind this blog. Now I've moved the images I have to update the `@id` in all of the info.json files so that it points to the correct place. Note if you forget to do this then OpenSeaDragon won't be able to open the image.
 
--- need to write script to update ids...
+-- need to write script to update ids... **TODO**
 
 {% include openseadragon.html image="/iiif/welsh_book/page002" %}
 
 
 [awesome-image]: https://github.com/IIIF/awesome-iiif#image-servers
 [static-tiles]: https://github.com/zimeon/iiif/tree/master/demo-static
+[iiif-welshbook]: https://github.com/glenrobson/glenrobson.github.io/tree/serverless_iiif/iiif/welsh_book
