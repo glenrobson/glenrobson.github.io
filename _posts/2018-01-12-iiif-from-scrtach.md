@@ -136,7 +136,21 @@ To process all of the images I can run the following:
 
 and this generates 14 directories in `/tmp/welsh_book`. I've then copied the 14 directories into [this github project][iiif-welshbook] which is the code behind this blog. Now I've moved the images I have to update the `@id` in all of the info.json files so that it points to the correct place. Note if you forget to do this then OpenSeaDragon won't be able to open the image.
 
--- need to write script to update ids... **TODO**
+I've written a program [updateImageId.py][updateImage] that can be run as follows:
+
+```
+./standalone-iiif/updateImageId.py json_file 'https://glenrobson.github.io/iiif/welsh_book/
+```
+
+and this should prepend the correct prefix to make it work on this site. To run this on allow of the images I run:
+
+```
+find ../gdmr-digital/ -name "info.json" -exec ./standalone-iiif/updateImageId.py {} 'https://glenrobson.github.io/iiif/welsh_book/' \;
+```
+
+Note if you make a mistake then have a look at the updateImageId.py README to see how you can replace a prefix.
+
+It should now be possible to view the static image using Openseadragon:
 
 {% include openseadragon.html image="/iiif/welsh_book/page002" %}
 
@@ -144,3 +158,4 @@ and this generates 14 directories in `/tmp/welsh_book`. I've then copied the 14 
 [awesome-image]: https://github.com/IIIF/awesome-iiif#image-servers
 [static-tiles]: https://github.com/zimeon/iiif/tree/master/demo-static
 [iiif-welshbook]: https://github.com/glenrobson/glenrobson.github.io/tree/serverless_iiif/iiif/welsh_book
+[updateImage]: https://github.com/glenrobson/iiif_stuff/blob/master/standalone-iiif/updateImageId.py
