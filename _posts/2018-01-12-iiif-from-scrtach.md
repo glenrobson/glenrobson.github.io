@@ -152,7 +152,7 @@ Note if you make a mistake then have a look at the updateImageId.py README to se
 
 It should now be possible to view the static image using Openseadragon:
 
-{% include openseadragon.html image="/iiif/welsh_book/page002" %}
+{% include openseadragon.html image="https://glenrobson.github.io/iiif/welsh_book/page002" %}
 
 
 [awesome-image]: https://github.com/IIIF/awesome-iiif#image-servers
