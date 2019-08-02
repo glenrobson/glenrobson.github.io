@@ -37,6 +37,7 @@ remote_theme: "mmistakes/minimal-mistakes"
 plugins:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-include-cache
 
 #teaser: /assets/images/main.jpg
 breadcrumbs: false
