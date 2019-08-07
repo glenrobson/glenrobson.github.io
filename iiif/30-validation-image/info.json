@@ -1,0 +1,30 @@
+{
+  "tiles" : [ {
+    "scaleFactors" : [ 1, 2, 4, 8 ],
+    "width" : 256,
+    "height" : 256
+  } ],
+  "protocol" : "http://iiif.io/api/image",
+  "sizes" : [ {
+    "width" : 200,
+    "height" : 200
+  }, {
+    "width" : 250,
+    "height" : 250
+  }, {
+    "width" : 333,
+    "height" : 333
+  }, {
+    "width" : 500,
+    "height" : 500
+  }, {
+    "width" : 1000,
+    "height" : 1000
+  } ],
+  "profile" : "level0",
+  "width" : 1000,
+  "id" : "https://glenrobson.github.io/iiif/30-validation-image",
+  "type" : "ImageService3",
+  "@context" : "http://iiif.io/api/image/3/context.json",
+  "height" : 1000
+}
