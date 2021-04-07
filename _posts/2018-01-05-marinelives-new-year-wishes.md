@@ -9,13 +9,7 @@ toc_label: "Wish List"
 toc_icon: "align-left"
 ---
 
-This post began as a discussion on [twitter][ml-tw-discussion] on how IIIF could help the MarineLives project achieve their goals on collecting and transcribing historical content related to the manuscripts of the High Court of Admiralty 1627-1677. You can read more about their mission on the MarineLives [wiki][about-MarineLives] and in the following:
-
-<figure>
-	<a href="http://www.MarineLives.org/wiki/MarineLives#About_MarineLives"><img src="http://www.marinelives.org/thumb.php?f=New_ML_Vision_Rev_21102017.JPG&width=1400"></a>
-	<figcaption><a href="http://www.MarineLives.org/wiki/MarineLives#About_MarineLives" title="About the MarineLives project">About the MarineLives project</a>.</figcaption>
-</figure>
-
+This post began as a discussion on [twitter][ml-tw-discussion] on how IIIF could help the MarineLives project achieve their goals on collecting and transcribing historical content related to the manuscripts of the High Court of Admiralty 1627-1677. You can read more about their mission on the MarineLives [wiki][about-MarineLives].
 
 The MarineLives 2018 New Years Wish list is as follows:
 
