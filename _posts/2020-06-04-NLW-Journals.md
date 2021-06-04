@@ -4,13 +4,14 @@ title:  "NLW Journals Writeup"
 date:   2020-06-04 12:27:22 +0000
 categories: iiif
 ---
-# 2020 Update
-
-I often find that I link to this article but the original isn't always available so I have copied it for posterity here. The original is available on the [NLW Dev Site](https://dev.llgc.org.uk/wiki/index.php?title=IIIF_Journals).
-
+[NLW Journals](https://journals.library.wales) write up from 2017. I often find that I link to this article but the original isn't always available so I have copied it here for posterity. The original is available on the [NLW Dev Site](https://dev.llgc.org.uk/wiki/index.php?title=IIIF_Journals).
 
 # Welsh Journals Technical Writeup 
-Authors: Glen Robson - Head of Systems, Dan Field - Head of Development, Dylan Jones - Senior Web Developer, Kim Botticelli - Senior Web Developer
+Authors: 
+ * Glen Robson - Head of Systems, 
+ * Dan Field - Head of Development, 
+ * Dylan Jones - Senior Web Developer, 
+ * Kim Botticelli - Senior Web Developer
 
 This document describes how the National Library of Wales (NLW) has built the new Journals website https://journals.library.wales. The new website brings together two collections of Welsh Journals and also provides access to content that hasn’t previously been available. The amount of content in the new website includes:
 
@@ -24,7 +25,7 @@ The development was done on top of the NLW IIIF infrastructure including harvest
 ## Background
 The NLW has worked on two Journal projects. The first project was funded by JISC digitising 50 modern Welsh Journals. The second project was funded by the Welsh Government and the European Regional Development fund to digitise over one million pages of Journal content. The content of the Journals ranges from academic and scientific publications to literary and popular magazines. Further details on the collection can be seen at:
 
-https://www.llgc.org.uk/index.php?id=7594
+[https://www.llgc.org.uk/index.php?id=7594](https://www.llgc.org.uk/index.php?id=7594)
 
 The JISC-funded modern Welsh Journals project was undertaken around 2008 and included content that was under copyright so Authors and Publications had to be identified and rights status established. As part of the digitisation workflow articles were identified by noting the article start and end page. The project website was launched around 2009/10. 
 
@@ -35,7 +36,7 @@ The Journal pages were scanned to TIFF files and a number of derivatives were cr
 
 The metadata for the Journals is stored in the NLW fedora repository as METS documents and these were converted to IIIF Manifests and Collections as can be seen in the diagram below. The IIIF standard promotes using a seeAlso link to point to structured metadata and we converted our MODS metadata to EDM. The list of Journals which are part of the project are listed in a sitemap and this is what we used for indexing. 
 
-http://dev.llgc.org.uk/iiif/IIIF_Journals_Technical_ARC.jpg
+![Technical infrastructure diagram](http://dev.llgc.org.uk/iiif/IIIF_Journals_Technical_ARC.jpg)
 
 ### Sitemap 
 
@@ -66,7 +67,7 @@ There wasn’t time to add last modification dates into the sitemap but this wou
 
 An example EDM record for a title can be seen below:
 
-http://dams.llgc.org.uk/behaviour/llgc-id:2000001/fedora-sdef:rdf/toRDF
+[http://dams.llgc.org.uk/behaviour/llgc-id:2000001/fedora-sdef:rdf/toRDF](http://dams.llgc.org.uk/behaviour/llgc-id:2000001/fedora-sdef:rdf/toRDF)
 
 Issue level manifests also contain links to EDM but it was only the title level that was indexed for this project. The EDM record provided the following information in the SOLR record:
 
@@ -81,32 +82,32 @@ Frequency of publication was added later to the EDM.
 
 The original Welsh Journals project contained Article information and this has been encoded using IIIF Ranges and an example can be seen at:
 
-http://dams.llgc.org.uk/iiif/2.0/1097087/manifest.json
+[http://dams.llgc.org.uk/iiif/2.0/1097087/manifest.json](http://dams.llgc.org.uk/iiif/2.0/1097087/manifest.json)
 
 The ranges contain an article title, author and type although only the title is shown through the Universal Viewer. The Universal Viewer displays these ranges in the index panel and this manifest can be seen in isolation at:
 
-https://viewer.library.wales/1097087 
+[https://viewer.library.wales/1097087](https://viewer.library.wales/1097087) 
 
 When viewing this manifest in the Journals website the Universal Viewer shows the current issue within its context of running Journals issues:
 
-https://journals.library.wales/view/1093205/1097087
+[https://journals.library.wales/view/1093205/1097087](https://journals.library.wales/view/1093205/1097087)
 
 In the index section you can view the issues either by label (from the Journal Title IIIF Collection) or by navDate. 
 
 ### Missing Pages 
 During the processing of the second Journals project the NLW developed a tool which would allow the re-arrangement of images and also the adding of missing pages where the original pages weren’t available for digitisation. These images are noted in the METS document and in the generated IIIF manifests these appear as canvases without a IIIF Image service. See the following as an example which is a slightly extreme example picked up during testing. We believe that there was only one image (page 16) available for this issue hence the first 16 pages are marked as missing. The more common case is where a single image is missing in a sequence:
 
-https://viewer.library.wales/2886549 (http://dams.llgc.org.uk/iiif/2.0/2886549/manifest.json)
+[https://viewer.library.wales/2886549](https://viewer.library.wales/2886549) ([http://dams.llgc.org.uk/iiif/2.0/2886549/manifest.json](http://dams.llgc.org.uk/iiif/2.0/2886549/manifest.json))
 
 ### Broken Images
 During the validation of images we undertook during development we found 6 images which required attention. Some of these could be regenerated from the original tiff file but some images will require further work after the project has completed. One jp2 in particular passes jhove validation and jpylyzer analysis but still doesn’t work using IIP image and will have to be reported. To create a valid manifest we treated these errors similar to above and marked them as missing. See page 35 of the following:
 
-https://viewer.library.wales/2161205 (http://dams.llgc.org.uk/iiif/2.0/2161205/manifest.json)
+[https://viewer.library.wales/2161205](https://viewer.library.wales/2161205) ([http://dams.llgc.org.uk/iiif/2.0/2161205/manifest.json](http://dams.llgc.org.uk/iiif/2.0/2161205/manifest.json))
 
 ### Rights protected Images
 In the original Welsh Journals project there are a number of pages which are protected due to copyright reasons. Some images have been blanked but others are protected by the Fedora rights management process. These images present a 401 when requested. We looked into how this would work in the Universal Viewer and if it was a use case for the IIIF Authentication API. The following manifest responds to 401s in two different ways:
 
-https://viewer.library.wales/1272050 (http://dams.llgc.org.uk/iiif/2.0/1272050/manifest.json)
+[https://viewer.library.wales/1272050](https://viewer.library.wales/1272050) ([http://dams.llgc.org.uk/iiif/2.0/1272050/manifest.json](http://dams.llgc.org.uk/iiif/2.0/1272050/manifest.json))
 
 Pages 162 and 163 return a 401 if the info.json is requested with a customer error message in Welsh and English. If you request these images using CURL you get the following response:
 
@@ -116,7 +117,7 @@ HTTP/1.1 401 Nid yw'r hawliau gennym i arddangos y deunydd hwn. - We do not have
 
 This works in the Universal Viewer as it displays the message in a information box. The possibly more correct way of doing this is in page 166 to 177 where the info.json displays a rights service with a description saying the content is unavailable. Unfortunately currently this isn’t working in the UV and more experimentation is needed to see what needs to be in the info.json to make this use case work. The experimental info.json for page 166 is:
 
-https://damsssl.llgc.org.uk/iiif/2.0/image/1272222/info.json
+[https://damsssl.llgc.org.uk/iiif/2.0/image/1272222/info.json](https://damsssl.llgc.org.uk/iiif/2.0/image/1272222/info.json)
 
 ### Validation
 One of the things we found most useful during the development of the website was to have a validation script that would go through the sitemap and validate all of the IIIF collections and manifests and identify missing fields that were considered ‘mandatory’ for the project.  The validator for this project checked the following:
@@ -193,7 +194,7 @@ One of the issues is it is very difficult to predict the number of results per I
 
 The second problem we came across was linking between the results in the website e.g:
 
-https://journals.library.wales/search?query=%22Pryse+Family%22&range%5Bmin%5D=1735&range%5Bmax%5D=2007
+[https://journals.library.wales/search?query=%22Pryse+Family%22&range%5Bmin%5D=1735&range%5Bmax%5D=2007](https://journals.library.wales/search?query=%22Pryse+Family%22&range%5Bmin%5D=1735&range%5Bmax%5D=2007)
 
 and if you click on the first result you get to the viewer which doesn’t highlight the words on the page. The reason for this is that you can pass complicated query parameters to SOLR including; OR, AND, NOT and speech marks among others (see https://wiki.apache.org/solr/SolrQuerySyntax for full details) which result in hits in the SOLR search but in the IIIF search implementation this needs to be matched with the compressed annotations. The common features of OR, AND, NOT are supported but currently speech mark phrases are unsupported.
 
@@ -201,10 +202,10 @@ and if you click on the first result you get to the viewer which doesn’t highl
 
 Throughout our project we have used a standard URI structure for our document viewers of /[publicationpid]/[issuepid]/[pagenumber], for example:
 
-* http://newspapers.library.wales/view/3600141/3600147/64
-* https://journals.library.wales/view/1050541/1051974/8
+* [http://newspapers.library.wales/view/3600141/3600147/64](http://newspapers.library.wales/view/3600141/3600147/64)
+* [https://journals.library.wales/view/1050541/1051974/8](https://journals.library.wales/view/1050541/1051974/8)
 
 To continue following these standards while using the UniversalViewer we had to address the problem of detecting changes in the front-end such as users navigating through issues or pages and update the URI to reflect this. JavaScript was used to process the hash parameters and to detect when either the m (issue) value or cv (page) value, and to replace the URI segments with the updated values. The issuepid was retrieved from the manifest using the publicationpid.
 
-Originally published at 23:59, 11 April 2017 (BST)
+Originally published at 23:59, 11 April 2017 (BST) on the [NLW Dev Site](https://dev.llgc.org.uk/wiki/index.php?title=IIIF_Journals).
 
