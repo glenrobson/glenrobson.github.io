@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "NLW Journals Writeup"
-date:   2020-06-04 12:27:22 +0000
+date:   2021-06-04 12:27:22 +0000
 categories: iiif
 ---
 [NLW Journals](https://journals.library.wales) write up from 2017. I often find that I link to this article but the original isn't always available so I have copied it here for posterity. The original is available on the [NLW Dev Site](https://dev.llgc.org.uk/wiki/index.php?title=IIIF_Journals).
